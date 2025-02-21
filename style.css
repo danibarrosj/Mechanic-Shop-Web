@@ -4,14 +4,26 @@
     box-sizing: border-box;
     outline: none; 
     border: none;
-    background-color:#1e130f ;
-    color: white;
+    background-color:white ;
+    color: #1e130f;
 }
-h1{
-    font-size: 2rem;
-    font-weight: 700;
+
+.title-bar {
+    background-color: #1e130f; 
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.comp-name {
+    font-size: 34px;
+    font-weight: bold;
     color: white;
-    text-align: center;
+    margin: 0;
+    background: none;
 }
 img{
     width: 100%;
@@ -26,7 +38,7 @@ body{
     background-color: #1e130f;
 }
 nav{
-    max-width: 1200px;
+    max-width: 100%;
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -35,9 +47,43 @@ nav{
     gap: 2rem;
 }
 .nav-logo{
-    max-width: 400px;
+    max-width: 200px;
     border-radius: 25%;
     display: flex;
     position: relative;
-    left: -200px;
+    left: -50px;
+}
+.nav-links{
+    display: flex;
+    list-style:none;
+    gap: 3rem;
+}
+.link a{
+    position: relative;
+    padding-bottom: 0.75rem;
+    color: #1e130f;
+}
+.link a::after{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(226, 230, 4);
+    transition: all 0.3s ease;
+}
+link a:hover::after{
+    width: 70%;
+}
+.btn{
+    padding: 0.5rem 1rem;
+    background-color: rgb(226, 230, 4);
+    color: black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: rgb(131, 160, 27);
+    transition: all 0.3s ease;
 }
