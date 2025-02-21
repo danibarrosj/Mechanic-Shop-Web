@@ -47,11 +47,11 @@ nav{
     gap: 2rem;
 }
 .nav-logo{
-    max-width: 200px;
+    max-width: 300px;
     border-radius: 25%;
     display: flex;
     position: relative;
-    left: -50px;
+    left: 100px;
     box-shadow: 0 0 30px 30px rgba(255,255,255,1);
 }
 .nav-links{
