@@ -52,6 +52,7 @@ nav{
     display: flex;
     position: relative;
     left: -50px;
+    box-shadow: 0 0 30px 30px rgba(255,255,255,1);
 }
 .nav-links{
     display: flex;
