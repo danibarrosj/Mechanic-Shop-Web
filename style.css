@@ -136,25 +136,25 @@ header {
 
 .content {
     flex: 1;
-    max-width: 50%;
+    max-width: 60%;
     color: white;
+    text-align: center;
 }
 
 .content h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
-    text-align: center;
     color: white;
     margin-top: -2rem;
 
 }
 
 .content p {
-    font-size: 1rem;
+    font-size: 1.5rem;
     line-height: 1.8rem;
     color: white;
     text-align: left;
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 
 /* Image Section (Right Side) */
@@ -163,13 +163,60 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    transform: scaleX(-1);
 }
 
 .car img {
-    max-width: 50%;
-    border-radius: 10px; /* Optional rounded corners */
+    max-width: 70%;
+    margin-right: auto;
+}
+.car2{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.car2 img {
+    max-width: 68%;
+    transform: scaleX(-1);
+    margin-left: -8rem;
+}
+.subhead{
+    text-align: center;
+}
+.subhead h2{
+    font-size: 2.5rem;
+    margin-top: 2rem;
+    margin-bottom: .5rem;
+}
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* 5 columns */
+    grid-template-rows: repeat(2, auto); /* 2 rows */
+    gap: 2rem;
+    margin-top: 2rem;
+    text-align: center; /* Centers text inside each service */
 }
 
+/* Service Boxes (Each Box Contains h4 + p) */
+.service {
+    background: #f4f4f4; /* Light background for contrast */
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Service Titles */
+.service h4 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+/* Service Descriptions */
+.service p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
 /* Responsive Design */
 @media (max-width: 1024px) {
     nav {
