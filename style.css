@@ -1,13 +1,19 @@
-*{
+/* Reset & Global Styles */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     outline: none; 
     border: none;
-    background-color:white ;
     color: #1e130f;
 }
 
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+}
+
+/* Title Bar */
 .title-bar {
     background-color: #1e130f; 
     width: 100%;
@@ -16,56 +22,77 @@
     align-items: center;
     justify-content: center;
     border-bottom-right-radius: 10px;
-    border-bottom-left-radius:10px;
+    border-bottom-left-radius: 10px;
 }
 
-
 .comp-name {
-    font-size: 34px;
+    font-size: 2rem;
     font-weight: bold;
     color: white;
     margin: 0;
-    background: none;
 }
-img{
+
+/* Images */
+img {
     width: 100%;
-    display: flex;
+    display: block;
 }
-a{
+
+/* Links */
+a {
     text-decoration: none;
     color: black;
+    font-size: 2rem;
 }
-body{
-    font-family: 'Poppins', sans-serif;
-    background-color: #1e130f;
+
+/* White Background */
+.white {
+    background-color: white;
+    width: 100%;
 }
-nav{
-    max-width: 100%;
+
+/* Navigation */
+nav {
+    max-width: 90%;
     margin: auto;
     display: flex;
     justify-content: space-between;
-    padding: 2rem 1rem;
+    padding: 1.5rem 1rem;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
+    background-color: white;
+    flex-wrap: wrap; /* Ensures items wrap on smaller screens */
 }
-.nav-logo{
-    max-width: 300px;
+
+/* Navigation Links */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 6rem;
+    flex-wrap: wrap; /* Allows links to wrap on smaller screens */
+}
+
+.nav-links li {
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+/* Logo */
+.nav-logo {
+    max-width: 200px;
     border-radius: 25%;
     display: flex;
     position: relative;
-    left: 100px;
 }
-.nav-links{
-    display: flex;
-    list-style:none;
-    gap: 3rem;
-}
-.link a{
+
+/* Navigation Links Hover Effect */
+.link a {
     position: relative;
     padding-bottom: 0.75rem;
     color: #1e130f;
 }
-.link a::after{
+
+.link a::after {
     content: '';
     position: absolute;
     width: 0;
@@ -75,27 +102,109 @@ nav{
     background-color: rgb(226, 230, 4);
     transition: all 0.3s ease;
 }
-link a:hover::after{
+
+.link a:hover::after {
     width: 70%;
 }
-.btn{
+
+/* Button Styling */
+.btn {
     padding: 0.5rem 1rem;
     background-color: rgb(226, 230, 4);
     color: black;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 1.5rem;
 }
-.btn:hover{
+
+.btn:hover {
     background-color: rgb(131, 160, 27);
     transition: all 0.3s ease;
 }
-.container{
-    max-width: 1200px;
-    margin: auto;
-    padding: 5rem 2rem;
+
+
+/* Header */
+header {
+    background-color: #1e130f;
+    width: 100vw;
+    padding: 1rem 0;
 }
-.blur{
-    position: absolute;
-    box-shadow: 0 0 1000px 50px #1e130f;
-    z-index: -100;
+
+/* Header Content */
+header .content h2 {
+    color: white;
+}
+
+header .content p {
+    font-size: 1rem;  
+    margin-top: 15px;
+    line-height: 2rem;
+    color: white;
+    max-width: 60%;
+    margin: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    nav {
+        max-width: 95%;
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .nav-logo {
+        max-width: 200px;
+        position: absolute;
+        top: 4rem;
+        left: 1rem;
+    }
+
+    .btn {
+        font-size: 1.2rem;
+        position: absolute;
+        top: 8rem;
+        right: 1rem;
+    }
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    nav {
+        position: relative; /* Keeps child elements positioned relative to nav */
+        padding: 1rem;
+    }
+
+    .nav-logo {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        max-width: 150px; /* Adjust logo size for smaller screens */
+    }
+
+    .btn-contact {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        font-size: 1rem;
+        padding: 0.4rem 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-logo {
+        max-width: 150px;
+    }
+
+    .btn-contact {
+        font-size: 0.9rem;
+        padding: 0.3rem 0.6rem;
+        top: 2rem;
+        right: 1rem;
+    }
 }
