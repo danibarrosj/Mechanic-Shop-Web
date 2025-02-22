@@ -84,7 +84,10 @@ nav {
     display: flex;
     position: relative;
 }
-
+.nav-logo :hover{
+    transform: scale(1.5);
+    transition: all 0.3s ease;
+}
 /* Navigation Links Hover Effect */
 .link a {
     position: relative;
@@ -145,12 +148,23 @@ header {
     font-size: 2rem;
     margin-bottom: 1rem;
     color: white;
-    margin-top: -2rem;
-
 }
-
+.content h3{
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: white;
+    margin-top: 0.5rem;
+    text-align: left;
+    font-family: cursive;
+}
+.content h4{
+   font-size: 1.2rem;
+   color: white;
+   text-align: right;
+   font-family:cursive
+}
 .content p {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     line-height: 1.8rem;
     color: white;
     text-align: left;
@@ -191,15 +205,14 @@ header {
 }
 .services-container {
     display: grid;
-    grid-template-columns: repeat(5, 1fr); /* 5 columns */
-    grid-template-rows: repeat(2, auto); /* 2 rows */
+    grid-template-columns: repeat(3, 1fr); /* 5 columns */
     gap: 2rem;
     margin-top: 2rem;
     text-align: center; /* Centers text inside each service */
 }
 
 /* Service Boxes (Each Box Contains h4 + p) */
-.service {
+.services {
     background: #f4f4f4; /* Light background for contrast */
     padding: 1.5rem;
     border-radius: 8px;
@@ -207,17 +220,30 @@ header {
 }
 
 /* Service Titles */
-.service h4 {
+.services h4 {
     margin-bottom: 0.5rem;
     font-size: 1.2rem;
 }
 
 /* Service Descriptions */
-.service p {
+.services p {
     font-size: 1rem;
     line-height: 1.5rem;
 }
 /* Responsive Design */
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 1024px) {
     nav {
         max-width: 95%;
