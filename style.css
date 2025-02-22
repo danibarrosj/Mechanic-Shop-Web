@@ -89,3 +89,13 @@ link a:hover::after{
     background-color: rgb(131, 160, 27);
     transition: all 0.3s ease;
 }
+.container{
+    max-width: 1200px;
+    margin: auto;
+    padding: 5rem 2rem;
+}
+.blur{
+    position: absolute;
+    box-shadow: 0 0 1000px 50px #1e130f;
+    z-index: -100;
+}
