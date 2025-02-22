@@ -15,14 +15,12 @@ body {
 
 /* Title Bar */
 .title-bar {
-    background-color: #1e130f; 
+    background-color: #000000; 
     width: 100%;
     height: 60px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-bottom-right-radius: 10px;
-    border-bottom-left-radius: 10px;
 }
 
 .comp-name {
@@ -41,7 +39,7 @@ img {
 /* Links */
 a {
     text-decoration: none;
-    color: black;
+    color: rgb(255, 255, 255);
     font-size: 2rem;
 }
 
@@ -53,15 +51,17 @@ a {
 
 /* Navigation */
 nav {
-    max-width: 90%;
-    margin: auto;
+    background-image: url('images/banner.webp'); /* Use the correct path */
+    background-size: cover; /* Ensure it covers the full area */
+    background-position: center bottom;  /* Center the image */
+    background-repeat: no-repeat; /* Prevent tiling */
+    width: 100%; /* Full width */
+    padding: 1.5rem 0; /* Adjust padding to fit content */
     display: flex;
     justify-content: space-between;
-    padding: 1.5rem 1rem;
     align-items: center;
-    gap: 1rem;
-    background-color: white;
-    flex-wrap: wrap; /* Ensures items wrap on smaller screens */
+    padding: 0 4rem;
+    height: 200px;
 }
 
 /* Navigation Links */
@@ -79,22 +79,30 @@ nav {
 
 /* Logo */
 .nav-logo {
-    max-width: 200px;
+    max-width: 250px;
     border-radius: 25%;
     display: flex;
     position: relative;
-}
-.nav-logo :hover{
-    transform: scale(1.5);
-    transition: all 0.3s ease;
-}
-/* Navigation Links Hover Effect */
-.link a {
-    position: relative;
-    padding-bottom: 0.75rem;
-    color: #1e130f;
+    left: 10rem;
 }
 
+.nav-links li a {
+    color: rgb(0, 0, 0); /* White text for contrast */
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 15px; /* Add spacing for better readability */
+    background: rgb(255, 255, 255); /* Semi-transparent background */
+    border-radius: 5px; /* Slightly rounded edges */
+    transition: all 0.3s ease-in-out; /* Smooth transition effect */
+}
+
+.nav-links li a:hover {
+    background: rgb(0, 0, 0); /* Lighten background on hover */
+    color: yellow; /* Change text color on hover */
+    transform: scale(1.7); /* Slightly enlarge the text */
+    transition: all 0.3s ease;
+}
 .link a::after {
     content: '';
     position: absolute;
@@ -128,11 +136,11 @@ nav {
 
 /* Header */
 header {
-    background-color: #1e130f; /* Brown background */
+    background-color: #ffffff; /* Brown background */
     width: 100vw;
     display: flex;
     justify-content: space-between; /* Text on the left, image on the right */
-    align-items: center;
+    align-items: left;
     padding: 0 2rem 0;
     gap: 2rem;
 }
@@ -140,38 +148,39 @@ header {
 .content {
     flex: 1;
     max-width: 60%;
-    color: white;
-    text-align: center;
+    color: rgb(0, 0, 0);
+    text-align: left;
 }
 
 .content h2 {
     font-size: 2rem;
     margin-bottom: 1rem;
-    color: white;
+    color: rgb(0, 0, 0);
+    text-align: center;
 }
 .content h3{
     font-size: 1rem;
     margin-bottom: 1rem;
-    color: white;
+    color: rgb(0, 0, 0);
     margin-top: 0.5rem;
     text-align: left;
     font-family: cursive;
 }
 .content h4{
    font-size: 1.2rem;
-   color: white;
+   color: rgb(0, 0, 0);
    text-align: right;
    font-family:cursive
 }
 .content p {
     font-size: 1.3rem;
     line-height: 1.8rem;
-    color: white;
+    color: rgb(0, 0, 0);
     text-align: left;
     margin-top: 2rem;
 }
 
-/* Image Section (Right Side) */
+/* Image Section (Right Side)
 .car {
     flex: 1;
     display: flex;
@@ -181,8 +190,8 @@ header {
 }
 
 .car img {
-    max-width: 70%;
-    margin-right: auto;
+    max-width: 72%;
+    margin-right: 13rem;
 }
 .car2{
     flex: 1;
@@ -191,10 +200,10 @@ header {
     align-items: center;
 }
 .car2 img {
-    max-width: 68%;
+    max-width: 70%;
     transform: scaleX(-1);
-    margin-left: -8rem;
-}
+    margin-left: -15rem;
+} */
 .subhead{
     text-align: center;
 }
@@ -230,6 +239,32 @@ header {
     font-size: 1rem;
     line-height: 1.5rem;
 }
+.services-container :hover{
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+}
+.subhead .serv-desc {
+    background-color: #000000; 
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(169, 197, 8);
+    font-size: 3rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 /* Responsive Design */
 
 
