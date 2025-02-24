@@ -135,7 +135,7 @@ header {
 
 .content {
     flex: 1;
-    max-width: 60%;
+    max-width: 50%;
     color: rgb(0, 0, 0);
     text-align: left;
 }
@@ -146,33 +146,16 @@ header {
     color: rgb(0, 0, 0);
     text-align: center;
 }
-
-/* Image Section (Right Side)
-.car {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: scaleX(-1);
+.content p{
+    width:100%;
+    text-align:center;
+    font-size: 18px;
 }
-
-.car img {
-    max-width: 72%;
-    margin-right: 13rem;
+header h4{
+    text-align: right;
+    padding-top: 2rem;
+    font-family: cursive;
 }
-.car2{
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.car2 img {
-    max-width: 70%;
-    transform: scaleX(-1);
-    margin-left: -15rem;
-} */
-
-
 
 
 /* Services Start */
@@ -189,7 +172,6 @@ header {
     justify-content: center;
     color: rgb(169, 197, 8);
     font-size: 3rem;
-    margin-top: 20px;
     margin-bottom: 5px;
 }
 .subhead h2{
