@@ -13,7 +13,12 @@ body {
     background-color: #ffffff;
 }
 
-/* Title Bar */
+html, body {
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    width: 100%;
+}
+
+/* --- Title Bar --- */
 .title-bar {
     background-color: #000000; 
     width: 100%;
@@ -31,46 +36,45 @@ body {
     padding: 2rem;
 }
 
-/* Images */
+/* --- Images --- */
 img {
     width: 100%;
     display: block;
 }
 
-/* Links */
+/* --- Links --- */
 a {
     text-decoration: none;
     color: rgb(255, 255, 255);
     font-size: 2rem;
 }
 
-/* White Background */
+/* --- White Background --- */
 .white {
     background-color: white;
     width: 100%;
 }
 
-/* Navigation */
+/* --- Navigation Bar --- */
 nav {
-    background-image: url('images/banner.webp'); /* Use the correct path */
-    background-size: cover; /* Ensure it covers the full area */
-    background-position: center bottom;  /* Center the image */
-    background-repeat: no-repeat; /* Prevent tiling */
-    width: 100%; /* Full width */
-    padding: 1.5rem 0; /* Adjust padding to fit content */
+    background-image: url('images/banner.webp');
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 4rem;
+    padding: 1.5rem 4rem;
     height: 200px;
 }
 
-/* Navigation Links */
+/* --- Navigation Links --- */
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 6rem;
-    flex-wrap: wrap; /* Allows links to wrap on smaller screens */
+    gap: 3rem;
+    flex-wrap: wrap;
 }
 
 .nav-links li {
@@ -78,48 +82,32 @@ nav {
     font-weight: 400;
 }
 
-/* Logo */
+/* --- Logo --- */
 .nav-logo {
     max-width: 250px;
     border-radius: 25%;
     display: flex;
-    position: relative;
-    left: 10rem;
 }
 
+/* --- Navigation Links Styling --- */
 .nav-links li a {
-    color: rgb(0, 0, 0); /* White text for contrast */
-    font-size: 2.5rem;
+    color: rgb(0, 0, 0);
+    font-size: 2rem;
     font-weight: bold;
     text-decoration: none;
-    padding: 10px 15px; /* Add spacing for better readability */
-    background: rgb(255, 255, 255); /* Semi-transparent background */
-    border-radius: 20px; /* Slightly rounded edges */
-    transition: all 0.3s ease-in-out; /* Smooth transition effect */
+    padding: 10px 15px;
+    background: rgb(255, 255, 255);
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
 }
 
 .nav-links li a:hover {
-    background: rgb(0, 0, 0); /* Lighten background on hover */
-    color: yellow; /* Change text color on hover */
-    transform: scale(1.7); /* Slightly enlarge the text */
-    transition: all 0.3s ease;
-}
-.link a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: 0;
-    left: 0;
-    background-color: rgb(226, 230, 4);
-    transition: all 0.3s ease;
+    background: rgb(0, 0, 0);
+    color: yellow;
+    transform: scale(1.2);
 }
 
-.link a:hover::after {
-    width: 70%;
-}
-
-/* Button Styling */
+/* --- Button Styling --- */
 .btn {
     padding: 0.5rem 1rem;
     background-color: rgb(226, 230, 4);
@@ -134,15 +122,14 @@ nav {
     transition: all 0.3s ease;
 }
 
-
-/* Header */
+/* --- Header --- */
 header {
-    background-color: #ffffff; /* Brown background */
+    background-color: #ffffff;
     width: 100vw;
     display: flex;
-    justify-content: space-between; /* Text on the left, image on the right */
+    justify-content: space-between;
     align-items: left;
-    padding: 0 2rem 0;
+    padding: 2rem;
     gap: 2rem;
 }
 
@@ -158,27 +145,6 @@ header {
     margin-bottom: 1rem;
     color: rgb(0, 0, 0);
     text-align: center;
-}
-.content h3{
-    font-size: 1rem;
-    margin-bottom: 1rem;
-    color: rgb(0, 0, 0);
-    margin-top: 0.5rem;
-    text-align: left;
-    font-family: cursive;
-}
-.content h4{
-   font-size: 1.2rem;
-   color: rgb(0, 0, 0);
-   text-align: right;
-   font-family:cursive
-}
-.content p {
-    font-size: 1.3rem;
-    line-height: 1.8rem;
-    color: rgb(0, 0, 0);
-    text-align: left;
-    margin-top: 2rem;
 }
 
 /* Image Section (Right Side)
@@ -291,12 +257,10 @@ header {
 .car-body-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr); 
-    grid-template-rows: auto auto; 
     gap: 2rem;
     margin-top: 2rem;
     text-align: center;
     width: 80%;
-    max-width: 1200px; /* Prevents over-expansion */
     margin: 0 auto; /* Centers the grid container */
 }
 
@@ -410,11 +374,10 @@ header {
     padding: 1.5rem;
     border-radius: 12px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 100%; /* ✅ Ensures even spacing */
+    text-align: center; /* ✅ Ensures even spacing */
     max-width: 300px; /* ✅ Prevents cards from stretching */
 }
-.pricing .card :hover{
+.pricing-container .card :hover{
     transform: scale(1.1);
     transition: all 0.3s ease;
 }
@@ -479,66 +442,62 @@ footer {
 
 /* Responsive Design */
 
-@media (max-width: 1024px) {
+@media (max-width: 900px) {
     nav {
-        max-width: 95%;
-        flex-direction: column;
-        text-align: center;
-        gap: 1rem;
+        .nav-links {
+            display: none;
+        }
     }
 
-    .nav-links {
-        flex-direction: column;
-        gap: 1rem;
-    }
 
     .nav-logo {
         max-width: 200px;
         position: absolute;
         top: 4rem;
-        left: 1rem;
+        left: 5rem;
     }
 
     .btn {
         font-size: 1.2rem;
         position: absolute;
         top: 8rem;
-        right: 1rem;
+        right: 5rem;
     }
 }
 
-/* Responsive Layout */
-@media (max-width: 768px) {
-    nav {
-        position: relative; /* Keeps child elements positioned relative to nav */
-        padding: 1rem;
+
+
+
+
+@media (max-width: 764px) {
+    .services-container{
+    grid-template-columns: repeat(2, 1fr);
+   }
+
+   .auto-detail .car-body-container {
+        grid-template-columns: repeat(2, 1fr) !important;
     }
 
-    .nav-logo {
-        position: absolute;
-        top: 1rem;
-        left: 1rem;
-        max-width: 150px; /* Adjust logo size for smaller screens */
-    }
-
-    .btn-contact {
-        position: absolute;
-        top: 1rem;
-        right: 1rem;
-        font-size: 1rem;
-        padding: 0.4rem 0.8rem;
-    }
+.pricing .pricing-container {
+    grid-template-columns: repeat(1, 1fr) !important; 
 }
+}
+
+
+
+
+
+
+
+
+
 
 @media (max-width: 480px) {
-    .nav-logo {
-        max-width: 150px;
+    .pricing-container {
+        grid-template-columns: repeat(1, 1fr) !important; /* Switch to 1 column */
     }
 
-    .btn-contact {
-        font-size: 0.9rem;
-        padding: 0.3rem 0.6rem;
-        top: 2rem;
-        right: 1rem;
+    .services-container{
+        grid-template-columns: repeat(1, 1fr);
+       }
     }
-}
