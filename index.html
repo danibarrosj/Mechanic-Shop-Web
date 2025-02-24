@@ -10,21 +10,21 @@
     <div class="title-bar">
         <span class="comp-name">BARROS MOTORS</span>
     </div>
-    <div class="whi">
-        <nav>
-            <!-- <img src="images/banner.webp"> -->
-            <div class="work-logo">
-                <img class="nav-logo" src="images/logo.png">
-            </div>
-            <ul class="nav-links">
-                <li class="link"><a href="services.html">Services</a></li> 
-                <li class="link"><a href="detail.html">Auto Detail</a></li>
-                <li class="link"><a href="https://barrosmotorsllc.com/">Towing</a></li>
-                <li class="link"><a href="pricing.html">Pricing</a></li>
-            </ul>
-            <button class="btn">Contact Us</button>
-        </nav>
-    </div>
+    <nav class="main-nav">
+        <div class="nav-container">
+          <div class="nav-logo">
+            <img src="images/logo.png" alt="Barros Motors Logo">
+          </div>
+          <ul class="nav-links">
+            <li class="link"><a href="services.html">Services</a></li>
+            <li class="link"><a href="detail.html">Auto Detail</a></li>
+            <li class="link"><a href="towing.html">Towing</a></li>
+            <li class="link"><a href="pricing.html">Pricing</a></li>
+          </ul>
+          <button class="btn">Contact Us</button>
+        </div>
+      </nav>
+      
     <header>
         <div class="car2">
             <!-- <img src="images/car2.jpg"> -->
@@ -200,6 +200,21 @@
         </div>            
  </footer>
 <!-- Footer Finish -->
-    <!-- <script src="script.js"></script>     -->
+
+ <!-- Window dimensions display -->
+ <div id="dimensions" style="position: fixed; bottom: 0; right: 0; background: rgba(255,255,255,0.8); padding: 5px; border: 1px solid #000;"></div>
+
+ <script>
+   function updateDimensions() {
+     const width = window.innerWidth;
+     const height = window.innerHeight;
+     document.getElementById('dimensions').textContent =
+       `Width: ${width}px, Height: ${height}px`;
+   }
+
+   // Update dimensions on page load and when the window is resized
+   window.addEventListener('resize', updateDimensions);
+   updateDimensions();
+ </script>      
 </body>    
 </html>
