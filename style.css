@@ -24,10 +24,11 @@ body {
 }
 
 .comp-name {
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: bold;
     color: white;
     margin: 0;
+    padding: 2rem;
 }
 
 /* Images */
@@ -223,6 +224,7 @@ header {
     color: rgb(169, 197, 8);
     font-size: 3rem;
     margin-top: 20px;
+    margin-bottom: 5px;
 }
 .subhead h2{
     font-size: 2.5rem;
@@ -272,7 +274,7 @@ header {
 
 
 
-/* Car Body Section */
+/* CAR BODY START */
 
 .car-build .serv-desc {
     background-color: #000000; 
@@ -283,7 +285,8 @@ header {
     justify-content: center;
     color: rgb(169, 197, 8);
     font-size: 3rem;
-    padding: 1rem 0;
+    padding: 2rem 0;  
+    margin: 20px auto;
 }
 .car-body-container {
     display: grid;
@@ -434,13 +437,37 @@ header {
     text-align: center;
 }
 
-
 /* Pricing Finish */
 
 
 
 
 
+
+
+
+/* Footer Start */
+
+footer {
+    background-color: #000000;
+    padding-top: 5px; 
+    padding-bottom: 5px;
+}
+.footer-container .footer-content h3,p {
+    text-align: center;
+}
+.footer-container .footer-content h3{
+    margin-top: 2rem;
+    font-size: 2rem;
+    color: yellow;
+}
+.footer-container .footer-content p{
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    color: #ffffff;
+}
+
+/* Footer Finish */
 
 
 
