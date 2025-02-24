@@ -52,7 +52,7 @@ html, body {
   
   /* Logo Styling */
   .nav-logo img {
-    max-width: 400px;
+    max-width: 200px;
     width: 100%;
     display: block;
   }
@@ -61,7 +61,7 @@ html, body {
   .nav-links {
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 3rem;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -71,7 +71,7 @@ html, body {
   .nav-links li a {
     color: #000000;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 2rem;
     font-weight: bold;
     transition: color 0.3s ease;
   }
@@ -93,6 +93,7 @@ html, body {
     cursor: pointer;
     white-space: nowrap;
     transition: background-color 0.3s ease;
+    font-size: 1.5rem;
   }
   
   .btn:hover {
@@ -100,47 +101,31 @@ html, body {
   }
 
 
-
-
-
-
-
-
-
-/* --- Header --- */
+/* Header with a background image */
 header {
-    background-color: #ffffff;
-    width: 100vw;
-    display: flex;
-    justify-content: space-between;
-    align-items: left;
+    background: url('images\\banner.webp') center/cover no-repeat;
+    padding: 4rem 0;
+    position: relative;
+  }
+  
+  /* White content box with a lined paper effect */
+  .content {
+    background-color: #fff;
+    max-width: 800px;
+    margin: 0 auto;
     padding: 2rem;
-    gap: 2rem;
-}
-
-.content {
-    flex: 1;
-    max-width: 50%;
-    color: rgb(0, 0, 0);
-    text-align: left;
-}
-
-.content h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-    color: rgb(0, 0, 0);
-    text-align: center;
-}
-.content p{
-    width:100%;
-    text-align:center;
-    font-size: 18px;
-}
-header h4{
-    text-align: right;
-    padding-top: 2rem;
-    font-family: cursive;
-}
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    position: relative;
+    z-index: 1;
+    /* Create horizontal lines every 30px */
+    background-image: repeating-linear-gradient(
+      to bottom,
+      transparent,
+      transparent 29px,
+      #eee 30px
+    );
+  }
 
 
 /* Services Start */
