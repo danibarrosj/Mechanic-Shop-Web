@@ -269,8 +269,6 @@ header {
     background: #f4f4f4;
     padding: 1.5rem;
     border-radius: 8px;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -443,12 +441,9 @@ footer {
 /* Responsive Design */
 
 @media (max-width: 900px) {
-    nav {
-        .nav-links {
-            display: none;
-        }
+    nav .nav-links {
+        display: none;
     }
-
 
     .nav-logo {
         max-width: 200px;
@@ -465,39 +460,29 @@ footer {
     }
 }
 
-
-
-
-
 @media (max-width: 764px) {
-    .services-container{
-    grid-template-columns: repeat(2, 1fr);
-   }
-
-   .auto-detail .car-body-container {
-        grid-template-columns: repeat(2, 1fr) !important;
+    body.mechanic-shop .services-container {
+        grid-template-columns: repeat(2, 1fr);
     }
 
-.pricing .pricing-container {
-    grid-template-columns: repeat(1, 1fr) !important; 
+    body.mechanic-shop .car-body-container {
+        grid-template-columns: repeat(1, 1fr)!important;
+    }
+     
+
+    body.mechanic-shop .pricing-container {
+        grid-template-columns: repeat(1, 1fr);
+        width: 100% !important;
+    }
+    
 }
-}
-
-
-
-
-
-
-
-
-
 
 @media (max-width: 480px) {
-    .pricing-container {
-        grid-template-columns: repeat(1, 1fr) !important; /* Switch to 1 column */
+    body.mechanic-shop .pricing-container {
+        grid-template-columns: repeat(1, 1fr); /* Switch to 1 column */
     }
 
-    .services-container{
+    body.mechanic-shop .services-container {
         grid-template-columns: repeat(1, 1fr);
-       }
     }
+}
