@@ -461,28 +461,54 @@ footer {
 }
 
 @media (max-width: 764px) {
-    body.mechanic-shop .services-container {
-        grid-template-columns: repeat(2, 1fr);
+
+    .comp-name{
+        font-size: 2rem;
+    }
+    .services-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    }
+    /* ✅ Auto Detail (Car Body Work) - Switch to 1 Column */
+    .car-body-container {
+        display: flex; /* Change from grid to flex */
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center cards */
+        width: 100%;
+        gap: 1.5rem; /* Reduce spacing */
+        margin: auto; /* Centers content */
     }
 
-    body.mechanic-shop .car-body-container {
-        grid-template-columns: repeat(1, 1fr)!important;
+    .car-body-container .card {
+        width: 90%; /* Full width but with padding */
+        max-width: 400px; /* Prevents too-wide stretching */
+        margin: 0 auto; /* Ensures centering */
     }
-     
 
-    body.mechanic-shop .pricing-container {
-        grid-template-columns: repeat(1, 1fr);
-        width: 100% !important;
+    /* ✅ Fix for Bottom Cards */
+    .car-body-container .card:nth-child(4),
+    .car-body-container .card:nth-child(5) {
+        width: 90%;
     }
-    
+
+    /* ✅ Pricing Section - Switch to 1 Column */
+    .pricing-container {
+        display: flex; /* Change from grid to flex */
+        flex-direction: column; /* Stack elements */
+        align-items: center; /* Center content */
+        width: 100%;
+        gap: 1.5rem;
+        margin: auto;
+    }
+
+    .pricing-container .card {
+        width: 90%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
 }
 
-@media (max-width: 480px) {
-    body.mechanic-shop .pricing-container {
-        grid-template-columns: repeat(1, 1fr); /* Switch to 1 column */
-    }
-
-    body.mechanic-shop .services-container {
-        grid-template-columns: repeat(1, 1fr);
+@media (max-width:480px) {
+    .services-container {
+        grid-template-columns: repeat(1, 1fr); /* 1 column */
     }
 }
