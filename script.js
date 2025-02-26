@@ -1,12 +1,16 @@
-function scrollToEelement(elementSelector, instance =0) {
-  const elements = document.querySelectorAll(elementSelector);
+function scrollToElement(elementSelector, instance = 0) {
+    const elements = document.querySelectorAll(elementSelector);
     if (elements.length > instance) {
-        elements[instance].scrollIntoView({ behavior: 'smooth'});
+      elements[instance].scrollIntoView({ behavior: 'smooth' });
     }
-}
-const link1 = document.getElementsByID('link1');
-const link2 = document.getElementsByID('link2');
-const link3 = document.getElementsByID('link3');
-const link4 = document.getElementsByID('link4');
-
-link1.addEventListener('click', () => {scrollToEelement('.serv-desc');})
+  }
+  document.addEventListener("DOMContentLoaded", function() {
+    const link4 = document.getElementById('link4');
+    
+    if (link4) {
+      link4.addEventListener('click', function(event) {
+        event.preventDefault(); // prevent the default link behavior
+        scrollToElement('.price-title'); // scrolls to the Pricing section
+      });
+    }
+  });

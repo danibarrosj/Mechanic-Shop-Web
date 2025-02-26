@@ -157,6 +157,9 @@ header {
 .subhead{
     text-align: center;
 }
+.serv-desc {
+    scroll-margin-top: 80px; /* Adjust this value as needed */
+  }
 .subhead .serv-desc {
     background-color: #000000; 
     width: 100%;
